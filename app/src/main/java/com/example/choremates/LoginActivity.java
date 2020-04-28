@@ -1,24 +1,23 @@
 package com.example.choremates;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity{
 
     ImageView back_arrow;
-    TextView forgot_password;
-    TextView help;
-    TextView register;
+    TextView forgot_password, help, register;
     Button login;
+    EditText email, password;
+    DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +25,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         back_arrow = findViewById(R.id.back_arrow);
-
         back_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         forgot_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (LoginActivity.this, ForgotPasswordActivity.class);
+                Intent intent = new Intent (LoginActivity.this, ConfirmEmailActivity.class);
                 startActivity(intent);
             }
         });
@@ -48,28 +46,59 @@ public class LoginActivity extends AppCompatActivity {
         help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                HelpDialog.openDialog("Help", "Log in using the email and password that you signed up with. If you forgot your password, then click forgot password.", LoginActivity.this, LoginActivity.this);
+                HelpDialog.openDialog(LoginActivity.this, LoginActivity.this,
+                 (ConstraintLayout)findViewById(R.id.layoutDialogContainer), getResources().getString(R.string.login_message)
+                , "Help");
             }
         });
-
         register = findViewById(R.id.register2);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (LoginActivity.this, SignUpActivity.class);
+//                Intent intent = new Intent (LoginActivity.this, SignUpActivity.class);
+//                startActivity(intent);
+
+                Intent intent = new Intent (LoginActivity.this, AddRoommatesActivity.class);
                 startActivity(intent);
             }
         });
 
+        db = new DatabaseHelper(this);
+        email = findViewById(R.id.email);
+        password = findViewById(R.id.password);
         login = findViewById(R.id.loginButton2);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (LoginActivity.this, ChoresActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
-
-
-}
+                String emailStr = email.getText().toString();
+                String passwordStr = password.getText().toString();
+                boolean checkCredentials = db.checkCredentials(emailStr, passwordStr);
+                if (emailStr.equals("")) {
+                    HelpDialog.openDialogNoTitle(LoginActivity.this, LoginActivity.this,
+                            (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
+                            "Please enter an email");
+                } else if (passwordStr.equals("")) {
+                    HelpDialog.openDialogNoTitle(LoginActivity.this, LoginActivity.this,
+                            (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
+                            "Please enter a password");
+                } else {
+                    if (checkCredentials) {
+                        Intent intent = new Intent(LoginActivity.this, ChoresActivity.class);
+                        startActivity(intent);
+                    } else {
+                        boolean emailExists = db.checkEmail(emailStr);
+                        if (emailExists) {
+                            HelpDialog.openDialogNoTitle(LoginActivity.this, LoginActivity.this,
+                                    (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
+                                    "No account found\nwith that email.");
+                        } else {
+                            HelpDialog.openDialogNoTitle(LoginActivity.this, LoginActivity.this,
+                                    (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
+                                    "Wrong email or\npassword");
+                        }//end else
+                    }//end else
+                }//end else
+            }//end method onClick
+        });//end onClickListened
+    }//end onCreate
+}//end class
