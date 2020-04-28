@@ -11,7 +11,7 @@
         android:layout_height="1280dp">
 
         <TextView
-            android:id="@+id/textView21"
+            android:id="@+id/whatDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
@@ -22,7 +22,7 @@
             android:fontFamily="@font/regular"
             android:gravity="center"
             android:text="What day will the chore start?"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textColor="@color/darkgreen"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
@@ -30,7 +30,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button14"
+            android:id="@+id/today"
             android:layout_width="127dp"
             android:layout_height="43dp"
             android:layout_marginStart="60dp"
@@ -41,12 +41,12 @@
             android:text="Today"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button13"
+            android:id="@+id/pickaday"
             android:layout_width="127dp"
             android:layout_height="43dp"
             android:layout_marginStart="50dp"
@@ -59,13 +59,13 @@
             android:text="Pick a day"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/tomorow"
             android:layout_width="127dp"
             android:layout_height="43dp"
             android:layout_marginTop="100dp"
@@ -76,11 +76,12 @@
             android:text="Tomorow"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/choredone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
@@ -92,7 +93,7 @@
             android:gravity="center"
             android:text="What day of the week does this\nchore need to be done?"
             android:textColor="@color/darkgreen"
-            android:textSize="20dp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -108,7 +109,7 @@
             android:fontFamily="@font/bold"
             android:text="Monday"
             android:textColor="@color/darkgreen"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -123,7 +124,7 @@
             android:fontFamily="@font/bold"
             android:text="Tueday"
             android:textColor="@color/darkgreen"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -138,7 +139,7 @@
             android:fontFamily="@font/bold"
             android:text="Wednesday"
             android:textColor="@color/darkgreen"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -153,7 +154,7 @@
             android:fontFamily="@font/bold"
             android:text="Thursday"
             android:textColor="@color/darkgreen"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -168,7 +169,7 @@
             android:fontFamily="@font/bold"
             android:text="Friday"
             android:textColor="@color/darkgreen"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -183,7 +184,7 @@
             android:fontFamily="@font/bold"
             android:text="Saturday"
             android:textColor="@color/darkgreen"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -200,12 +201,13 @@
             android:fontFamily="@font/bold"
             android:text="Sunday"
             android:textColor="@color/darkgreen"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/often"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
@@ -217,7 +219,7 @@
             android:gravity="center"
             android:text="How often does this chore need to\nbe done?"
             android:textColor="@color/darkgreen"
-            android:textSize="20dp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -234,7 +236,7 @@
             android:text="Just once"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -250,7 +252,7 @@
             android:text="Daily"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -266,7 +268,7 @@
             android:text="Weekly"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -282,7 +284,7 @@
             android:text="Monthly"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -298,7 +300,7 @@
             android:text="Biweekly"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -314,7 +316,7 @@
             android:text="Weekdays"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -332,12 +334,13 @@
             android:text="Weekends"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/end"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
@@ -349,12 +352,31 @@
             android:gravity="center"
             android:text="When will this chore end?"
             android:textColor="@color/darkgreen"
-            android:textSize="20dp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:layout_width="225dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="916dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:text="Who are you?"
+            android:textColor="@color/darkgreen"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <RadioButton
+            android:id="@+id/never"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="92dp"
@@ -362,13 +384,14 @@
             android:layout_marginTop="820dp"
             android:fontFamily="@font/bold"
             android:gravity="center"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:text="Never "
             android:textColor="@color/darkgreen"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <RadioButton
+            android:id="@+id/on_day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="92dp"
@@ -376,7 +399,7 @@
             android:layout_marginTop="860dp"
             android:fontFamily="@font/bold"
             android:gravity="center"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:text="On pick a date "
             android:textColor="@color/red"
             app:layout_constraintStart_toStartOf="parent"
@@ -388,7 +411,7 @@
             android:layout_height="43dp"
             android:layout_marginStart="60dp"
             android:layout_marginLeft="60dp"
-            android:layout_marginTop="910dp"
+            android:layout_marginTop="1020dp"
             android:layout_marginEnd="60dp"
             android:layout_marginRight="60dp"
             android:background="@drawable/buttonprofile1"
@@ -396,7 +419,26 @@
             android:text="Finish"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="15dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="97dp"
+            android:layout_marginLeft="97dp"
+            android:layout_marginTop="960dp"
+            android:layout_marginEnd="101dp"
+            android:layout_marginRight="101dp"
+            android:ems="10"
+            android:fontFamily="@font/regular"
+            android:inputType="textPersonName"
+            android:text="Write your name here"
+            android:textColor="@color/darkgreen"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
