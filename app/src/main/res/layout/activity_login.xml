@@ -21,7 +21,7 @@
         android:background="@drawable/input_field"
         android:ems="10"
         android:fontFamily="@font/regular"
-        android:hint="johnsmith@email.com"
+        android:hint="Enter Email"
         android:inputType="textEmailAddress"
         android:textColorHint="@color/hint"
         android:textSize="18sp"
