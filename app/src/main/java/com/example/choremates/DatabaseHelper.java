@@ -18,11 +18,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE user(email TEXT PRIMARY KEY, password TEXT, roommate1 TEXT, roommate2 TEXT, roommate3 TEXT, roommate4 TEXT)");
+        db.execSQL("CREATE TABLE chores(email TEXT, name TEXT, type TEXT, owner TEXT, frequency TEXT, startDate TEXT, endDate TEXT, days TEXT)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS user");
+        db.execSQL("DROP TABLE IF EXISTS chores");
     }
 
     /**
@@ -46,7 +48,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      */
     public boolean checkEmail(String email){
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("Select * from user where email=?", new String[]{email});
+        Cursor cursor = db.rawQuery("select * from user where email=?", new String[]{email});
         return cursor.getCount() <= 0;
     }//end method checkEmail
 
@@ -102,12 +104,57 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return ins != -1;
     }
 
+    public Cursor getRoommates(String email){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select * from user where email=?", new String[]{email});
+        return cursor;
+    }
+
     public boolean update (String key, String email, String update){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(key, update);
         long ins = db.update("user", contentValues, "email=?", new String[]{email});
         return ins != -1;
+    }
+
+    public boolean insertChore(String n, String t, String f, String sD, String eD, String o, String email, String days){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("name", n);
+        contentValues.put("type", t);
+        contentValues.put("owner", o);
+        contentValues.put("frequency", f);
+        contentValues.put("startDate", sD);
+        contentValues.put("endDate", eD);
+        contentValues.put("days", days);
+        long ins = db.update("chores", contentValues, "email=?", new String[]{email});
+        return ins != -1;
+    }
+
+    public boolean insertChore(String name, String type, String frequency, String days, String owner, String email){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("email", email);
+        contentValues.put("name", name);
+        contentValues.put("type", type);
+        contentValues.put("frequency", frequency);
+        contentValues.put("days", days);
+        contentValues.put("owner", owner);
+        long ins = db.replace("chores", null, contentValues);
+        return ins != -1;
+    }
+
+    public Cursor getChore(String email){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select name from chores where email=?", new String[]{email});
+        return cursor;
+    }
+
+    public Cursor getType(String email){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select type from chores where email=?", new String[]{email});
+        return cursor;
     }
 
 }
