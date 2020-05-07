@@ -18,6 +18,7 @@ public class LoginActivity extends AppCompatActivity{
     Button login;
     EditText email, password;
     DatabaseHelper db;
+    public static String email_string;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +81,7 @@ public class LoginActivity extends AppCompatActivity{
                             "Please enter a password");
                 } else {
                     if (checkCredentials) {
+                        email_string = email.getText().toString();
                         Intent intent = new Intent(LoginActivity.this, ChoresActivity.class);
                         startActivity(intent);
                     } else {
@@ -98,4 +100,8 @@ public class LoginActivity extends AppCompatActivity{
             }//end method onClick
         });//end onClickListened
     }//end onCreate
+
+    public static String getEmail(){
+        return email_string;
+    }
 }//end class
