@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.ExpandableListView;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.BaseTransientBottomBar;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,9 +26,9 @@ public class AddChoresActivity extends AppCompatActivity implements NavigationVi
     private Button kitchen;
     private Button bedroom;
     private Button bathroom;
-//    private Button general;
+    private Button general;
 //    private Button custom;
-//    private Button livingRoom;
+    private Button livingRoom;
 
     private DrawerLayout drawer;
     private ActionBarDrawerToggle toggle;
@@ -70,24 +71,24 @@ public class AddChoresActivity extends AppCompatActivity implements NavigationVi
             }
         });
 
-//        general = findViewById(R.id.generalButton);
-//        general.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(AddChoresActivity.this, GeneralChoresActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        general = findViewById(R.id.generalButton);
+        general.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddChoresActivity.this, GeneralChoresActivity.class);
+                startActivity(intent);
+            }
+        });
 
-//        livingRoom = findViewById(R.id.livingButton);
-//        livingRoom.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(AddChoresActivity.this, LivingroomChoresActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//
+        livingRoom = findViewById(R.id.livingButton);
+        livingRoom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddChoresActivity.this, LivingRoomChoresActivity.class);
+                startActivity(intent);
+            }
+        });
+
 //        custom = findViewById(R.id.customButton);
 //        custom.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -227,13 +228,17 @@ public class AddChoresActivity extends AppCompatActivity implements NavigationVi
                             startActivity(new Intent (getApplicationContext(), KitchenChoresActivity.class));
                             break;
                         case "1":
-                            startActivity(new Intent (getApplicationContext(), BedroomChoresActivity.class));
-                            break;
-                        case "2":
                             startActivity(new Intent (getApplicationContext(), BathroomChoresActivity.class));
                             break;
+                        case "2":
+                            startActivity(new Intent (getApplicationContext(), LivingRoomChoresActivity.class));
+                            break;
                         case "3":
+                            startActivity(new Intent (getApplicationContext(), GeneralChoresActivity.class));
+                            break;
                         case "4":
+                            startActivity(new Intent (getApplicationContext(), BedroomChoresActivity.class));
+                            break;
                         case "5":
                     }
                 }
