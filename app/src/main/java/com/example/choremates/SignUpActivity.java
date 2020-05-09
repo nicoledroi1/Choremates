@@ -43,8 +43,8 @@ public class SignUpActivity extends AppCompatActivity {
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent (SignUpActivity.this, ChoresActivity.class);
-                //startActivity(intent);
+                Intent intent = new Intent (SignUpActivity.this, ChoresActivity.class);
+                startActivity(intent);
             }
         });
     }
