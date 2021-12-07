@@ -4,4 +4,22 @@
     <string name="roomate_1">Roomate #1</string>
     <string name="enter_password">Enter Password</string>
     <string name="create_a_profile">Create A Profile</string>
+    <string name="save">Save</string>
+    <string name="event_name">Event Name</string>
+    <string name="how_to_use_choremates">How to Use Choremates</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="create_your_own_personal_profile_that_differs_from_the_other_roommates">Create your own personal profile that differs from the other roommates.</string>
+    <string name="use_the_chore_pages_to_add_chores_to_your_list_and_keep_up_with_your_chores">Use the chore pages to add chores to your list and keep up with your chores.</string>
+    <string name="add_and_create_chores_to_the_calendar">Add and create chores to the calendar.</string>
+    <string name="next">Next</string>
+    <string-array name="chores">
+        <item>What kind of chore is it?</item>
+        <item>Kitchen Chores</item>
+        <item>Bathroom Chores</item>
+        <item>Bedroom Chores</item>
+        <item>General Chores</item>
+        <item>Living Room Chores</item>
+    </string-array>
 </resources>

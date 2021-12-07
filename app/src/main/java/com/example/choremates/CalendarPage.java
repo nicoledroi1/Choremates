@@ -1,11 +1,9 @@
 package com.example.choremates;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.Activity;
 import android.os.Bundle;
 
-public class CalendarPage extends AppCompatActivity {
-
+public class CalendarPage extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -18,7 +18,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE user(email TEXT PRIMARY KEY, password TEXT, roommate1 TEXT, roommate2 TEXT, roommate3 TEXT, roommate4 TEXT)");
-        db.execSQL("CREATE TABLE chores(email TEXT, name TEXT, type TEXT, owner TEXT, frequency TEXT, startDate TEXT, endDate TEXT, days TEXT)");
+        db.execSQL("CREATE TABLE chores(email TEXT, name TEXT, type TEXT, owner TEXT, frequency TEXT, startDate TEXT, endDate TEXT, days TEXT, image INT)");
     }
 
     @Override
@@ -132,7 +132,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return ins != -1;
     }
 
-    public boolean insertChore(String name, String type, String frequency, String days, String owner, String email){
+    public boolean insertChore(String name, String type, String frequency, String days, String owner, int image, String email){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("email", email);
@@ -141,11 +141,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("frequency", frequency);
         contentValues.put("days", days);
         contentValues.put("owner", owner);
+        contentValues.put("image", image);
         long ins = db.replace("chores", null, contentValues);
         return ins != -1;
     }
 
-    public Cursor getChore(String email){
+    public Cursor getName(String email){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("select name from chores where email=?", new String[]{email});
         return cursor;
@@ -155,6 +156,48 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("select type from chores where email=?", new String[]{email});
         return cursor;
+    }
+
+    public Cursor getFrequency(String email){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select frequency from chores where email=?", new String[]{email});
+        return cursor;
+    }
+
+    public Cursor getOwner(String email){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select owner from chores where email=?", new String[]{email});
+        return cursor;
+    }
+
+    public Cursor getDays(String email){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select days from chores where email=?", new String[]{email});
+        return cursor;
+    }
+
+    public Cursor getEndDate(String email){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select endDate from chores where email=?", new String[]{email});
+        return cursor;
+    }
+
+    public Cursor getStartDate(String email){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select startDate from chores where email=?", new String[]{email});
+        return cursor;
+    }
+
+    public Cursor getImage(String email){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select image from chores where email=?", new String[]{email});
+        return cursor;
+    }
+
+    public boolean deleteChore(String email, String name){
+        SQLiteDatabase db = this.getWritableDatabase();
+        long ins =  db.delete("chores", "email=? and name=?", new String[]{email, name});
+        return ins != -1;
     }
 
 }

@@ -101,120 +101,120 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Switch
-            android:id="@+id/monday"
-            android:switchPadding="35.5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="55dp"
-            android:layout_marginLeft="55dp"
-            android:layout_marginTop="630dp"
-            android:fontFamily="@font/regular"
-            android:text="Monday"
-            android:textColor="@color/darkgreen"
-            android:textSize="18sp"
-            android:theme="@style/SCBSwitch"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <Switch-->
+<!--            android:id="@+id/monday"-->
+<!--            android:switchPadding="35.5dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="55dp"-->
+<!--            android:layout_marginLeft="55dp"-->
+<!--            android:layout_marginTop="630dp"-->
+<!--            android:fontFamily="@font/regular"-->
+<!--            android:text="Monday"-->
+<!--            android:textColor="@color/darkgreen"-->
+<!--            android:textSize="18sp"-->
+<!--            android:theme="@style/SCBSwitch"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-        <Switch
-            android:id="@+id/tuesday"
-            android:switchPadding="34dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="55dp"
-            android:layout_marginLeft="55dp"
-            android:layout_marginTop="670dp"
-            android:fontFamily="@font/regular"
-            android:text="Tuesday"
-            android:theme="@style/SCBSwitch"
-            android:textColor="@color/darkgreen"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <Switch-->
+<!--            android:id="@+id/tuesday"-->
+<!--            android:switchPadding="34dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="55dp"-->
+<!--            android:layout_marginLeft="55dp"-->
+<!--            android:layout_marginTop="670dp"-->
+<!--            android:fontFamily="@font/regular"-->
+<!--            android:text="Tuesday"-->
+<!--            android:theme="@style/SCBSwitch"-->
+<!--            android:textColor="@color/darkgreen"-->
+<!--            android:textSize="18sp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-        <Switch
-            android:id="@+id/wednesday"
-            android:switchPadding="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="55dp"
-            android:layout_marginLeft="55dp"
-            android:layout_marginTop="710dp"
-            android:fontFamily="@font/regular"
-            android:text="Wednesday"
-            android:theme="@style/SCBSwitch"
-            android:textColor="@color/darkgreen"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <Switch-->
+<!--            android:id="@+id/wednesday"-->
+<!--            android:switchPadding="8dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="55dp"-->
+<!--            android:layout_marginLeft="55dp"-->
+<!--            android:layout_marginTop="710dp"-->
+<!--            android:fontFamily="@font/regular"-->
+<!--            android:text="Wednesday"-->
+<!--            android:theme="@style/SCBSwitch"-->
+<!--            android:textColor="@color/darkgreen"-->
+<!--            android:textSize="18sp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-        <Switch
-            android:id="@+id/thursday"
-            android:switchPadding="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="630dp"
-            android:layout_marginEnd="55dp"
-            android:layout_marginRight="55dp"
-            android:fontFamily="@font/regular"
-            android:text="Thursday"
-            android:theme="@style/SCBSwitch"
-            android:textColor="@color/darkgreen"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <Switch-->
+<!--            android:id="@+id/thursday"-->
+<!--            android:switchPadding="10dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="630dp"-->
+<!--            android:layout_marginEnd="55dp"-->
+<!--            android:layout_marginRight="55dp"-->
+<!--            android:fontFamily="@font/regular"-->
+<!--            android:text="Thursday"-->
+<!--            android:theme="@style/SCBSwitch"-->
+<!--            android:textColor="@color/darkgreen"-->
+<!--            android:textSize="18sp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-        <Switch
-            android:id="@+id/friday"
-            android:switchPadding="32dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="670dp"
-            android:layout_marginEnd="55dp"
-            android:layout_marginRight="55dp"
-            android:fontFamily="@font/regular"
-            android:text="Friday"
-            android:textColor="@color/darkgreen"
-            android:theme="@style/SCBSwitch"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <Switch-->
+<!--            android:id="@+id/friday"-->
+<!--            android:switchPadding="32dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="670dp"-->
+<!--            android:layout_marginEnd="55dp"-->
+<!--            android:layout_marginRight="55dp"-->
+<!--            android:fontFamily="@font/regular"-->
+<!--            android:text="Friday"-->
+<!--            android:textColor="@color/darkgreen"-->
+<!--            android:theme="@style/SCBSwitch"-->
+<!--            android:textSize="18sp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-        <Switch
-            android:id="@+id/saturday"
-            android:switchPadding="13.5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="710dp"
-            android:layout_marginEnd="55dp"
-            android:layout_marginRight="55dp"
-            android:fontFamily="@font/regular"
-            android:text="Saturday"
-            android:theme="@style/SCBSwitch"
-            android:textColor="@color/darkgreen"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <Switch-->
+<!--            android:id="@+id/saturday"-->
+<!--            android:switchPadding="13.5dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="710dp"-->
+<!--            android:layout_marginEnd="55dp"-->
+<!--            android:layout_marginRight="55dp"-->
+<!--            android:fontFamily="@font/regular"-->
+<!--            android:text="Saturday"-->
+<!--            android:theme="@style/SCBSwitch"-->
+<!--            android:textColor="@color/darkgreen"-->
+<!--            android:textSize="18sp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-        <Switch
-            android:id="@+id/sunday"
-            android:switchPadding="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="750dp"
-            android:layout_marginEnd="70dp"
-            android:layout_marginRight="70dp"
-            android:fontFamily="@font/regular"
-            android:text="Sunday"
-            android:theme="@style/SCBSwitch"
-            android:textColor="@color/darkgreen"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <Switch-->
+<!--            android:id="@+id/sunday"-->
+<!--            android:switchPadding="10dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="70dp"-->
+<!--            android:layout_marginLeft="70dp"-->
+<!--            android:layout_marginTop="750dp"-->
+<!--            android:layout_marginEnd="70dp"-->
+<!--            android:layout_marginRight="70dp"-->
+<!--            android:fontFamily="@font/regular"-->
+<!--            android:text="Sunday"-->
+<!--            android:theme="@style/SCBSwitch"-->
+<!--            android:textColor="@color/darkgreen"-->
+<!--            android:textSize="18sp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
         <TextView
             android:id="@+id/often"

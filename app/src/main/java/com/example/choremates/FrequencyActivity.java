@@ -17,7 +17,7 @@ import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
 
-import com.google.android.material.badge.BadgeUtils;
+//import com.google.android.material.badge.BadgeUtils;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -74,33 +74,33 @@ public class FrequencyActivity extends AppCompatActivity {
         final Switch[] switches = new Switch[]{mon, tues, wed, thurs, fri, sat, sun};
 
         Intent intent = getIntent();
-        final String activity = intent.getStringExtra("Activity");
-        switch (activity) {
-            case "Bathroom":
-                currentChore = BathroomChoresActivity.getCurrentChore();
-                break;
-            case "Kitchen":
-                currentChore = KitchenChoresActivity.getCurrentChore();
-                break;
-            case "Bedroom":
-                currentChore = BedroomChoresActivity.getCurrentChore();
-                break;
-            case "General":
-                currentChore = GeneralChoresActivity.getCurrentChore();
-                break;
-            case "LivingRoom":
-                currentChore = LivingRoomChoresActivity.getCurrentChore();
-                break;
-//            case "Custom":
+//        final String activity = intent.getStringExtra("Activity");
+//        switch (activity) {
+//            case "Bathroom":
 //                currentChore = BathroomChoresActivity.getCurrentChore();
 //                break;
-        }
+//            case "Kitchen":
+//                currentChore = KitchenChoresActivity.getCurrentChore();
+//                break;
+//            case "Bedroom":
+//                currentChore = BedroomChoresActivity.getCurrentChore();
+//                break;
+//            case "General":
+//                currentChore = GeneralChoresPage.getCurrentChore();
+//                break;
+//            case "LivingRoom":
+//                currentChore = LivingRoomChoresActivity.getCurrentChore();
+//                break;
+////            case "Custom":
+////                currentChore = BathroomChoresActivity.getCurrentChore();
+////                break;
+//        }
 
-        if (LoginActivity.getEmail() == null || LoginActivity.getEmail().equals("")) {
-            email = SignUpActivity.getEmail();
-        } else {
-            email = LoginActivity.getEmail();
-        }
+//        if (LoginActivity.getEmail() == null || LoginActivity.getEmail().equals("")) {
+//            email = SignUpActivity.getEmail();
+//        } else {
+//            email = LoginActivity.getEmail();
+//        }
 
         Toast.makeText(getApplicationContext(), email, Toast.LENGTH_SHORT).show();
 
@@ -125,22 +125,22 @@ public class FrequencyActivity extends AppCompatActivity {
             }
         });
 
-        daily.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                currentChore.setFrequency(daily.getText().toString());
-                CustomAlertDialog.openDialogNoTitle(FrequencyActivity.this, FrequencyActivity.this,
-                        (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
-                        "You can skip the next section as\nthe days have been\npreset for you.");
-                mon.setChecked(true);
-                tues.setChecked(true);
-                wed.setChecked(true);
-                thurs.setChecked(true);
-                fri.setChecked(true);
-                sat.setChecked(true);
-                sun.setChecked(true);
-            }
-        });
+//        daily.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                currentChore.setFrequency(daily.getText().toString());
+//                CustomAlertDialog.openDialogNoTitle(FrequencyActivity.this, FrequencyActivity.this,
+//                        (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
+//                        "You can skip the next section as\nthe days have been\npreset for you.");
+//                mon.setChecked(true);
+//                tues.setChecked(true);
+//                wed.setChecked(true);
+//                thurs.setChecked(true);
+//                fri.setChecked(true);
+//                sat.setChecked(true);
+//                sun.setChecked(true);
+//            }
+//        });
 
         weekly.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -163,32 +163,32 @@ public class FrequencyActivity extends AppCompatActivity {
             }
         });
 
-        weekdays.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                currentChore.setFrequency(weekdays.getText().toString());
-                CustomAlertDialog.openDialogNoTitle(FrequencyActivity.this, FrequencyActivity.this,
-                        (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
-                        "You can skip the next section as\nthe days have been\npreset for you.");
-                mon.setChecked(true);
-                tues.setChecked(true);
-                wed.setChecked(true);
-                thurs.setChecked(true);
-                fri.setChecked(true);
-            }
-        });
+//        weekdays.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                currentChore.setFrequency(weekdays.getText().toString());
+//                CustomAlertDialog.openDialogNoTitle(FrequencyActivity.this, FrequencyActivity.this,
+//                        (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
+//                        "You can skip the next section as\nthe days have been\npreset for you.");
+//                mon.setChecked(true);
+//                tues.setChecked(true);
+//                wed.setChecked(true);
+//                thurs.setChecked(true);
+//                fri.setChecked(true);
+//            }
+//        });
 
-        weekends.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                currentChore.setFrequency(weekends.getText().toString());
-                CustomAlertDialog.openDialogNoTitle(FrequencyActivity.this, FrequencyActivity.this,
-                        (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
-                        "You can skip the next section as\nthe days have been\npreset for you.");
-                sat.setChecked(true);
-                sun.setChecked(true);
-            }
-        });
+//        weekends.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                currentChore.setFrequency(weekends.getText().toString());
+//                CustomAlertDialog.openDialogNoTitle(FrequencyActivity.this, FrequencyActivity.this,
+//                        (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
+//                        "You can skip the next section as\nthe days have been\npreset for you.");
+//                sat.setChecked(true);
+//                sun.setChecked(true);
+//            }
+//        });
 
         roommates = new ArrayList<String>();
         final Cursor cursor = db.getRoommates(email);
@@ -204,44 +204,44 @@ public class FrequencyActivity extends AppCompatActivity {
                 android.R.layout.simple_list_item_1, roommates);
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         owner.setAdapter(myAdapter);
-        owner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                currentChore.setOwner(parent.getItemAtPosition(position).toString());
-            }
+//        owner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                currentChore.setOwner(parent.getItemAtPosition(position).toString());
+//            }
+//
+////            @Override
+////            public void onNothingSelected(AdapterView<?> parent) {
+////                CustomAlertDialog.openDialogNoTitle(FrequencyActivity.this, FrequencyActivity.this,
+////                        (ConstraintLayout) findViewById(R.id.layoutDialogContainer), "" +
+////                                "Please choose an option!");
+////            }
+//        });
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                CustomAlertDialog.openDialogNoTitle(FrequencyActivity.this, FrequencyActivity.this,
-                        (ConstraintLayout) findViewById(R.id.layoutDialogContainer), "" +
-                                "Please choose an option!");
-            }
-        });
-
-        finish.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                for (int i = 0; i < switches.length; i++) {
-                    if (switches[i].isChecked()) {
-                        days = days.concat(switches[i].getText().toString() + " ");
-                    }
-                }
-                currentChore.setDays(days);
-                if (never.isChecked()) {
-                    currentChore.setEndDate("Never");
-                }
-
-                boolean insert = db.insertChore(currentChore.getName(), currentChore.getType(), currentChore.getFrequency(), currentChore.getDays(),
-                        currentChore.getOwner(), email);
-                if (insert) {
-                    CustomAlertDialog.openDialogNoTitleNoButton(FrequencyActivity.this, FrequencyActivity.this,
-                            (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
-                            "Chore added\nsuccessfully!");
-
-                }
-                Intent intent = new Intent(FrequencyActivity.this, ChoresActivity.class);
-                startActivity(intent);
-            }
-        });
+//        finish.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                for (int i = 0; i < switches.length; i++) {
+//                    if (switches[i].isChecked()) {
+//                        days = days.concat(switches[i].getText().toString() + " ");
+//                    }
+//                }
+//                currentChore.setDays(days);
+//                if (never.isChecked()) {
+//                    currentChore.setEndDate("Never");
+//                }
+//
+//                boolean insert = db.insertChore(currentChore.getName(), currentChore.getType(), currentChore.getFrequency(), currentChore.getDays(),
+//                        currentChore.getOwner(), email);
+//                if (insert) {
+//                    CustomAlertDialog.openDialogNoTitleNoButton(FrequencyActivity.this, FrequencyActivity.this,
+//                            (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
+//                            "Chore added\nsuccessfully!");
+//
+//                }
+//                Intent intent = new Intent(FrequencyActivity.this, ChoresActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 }

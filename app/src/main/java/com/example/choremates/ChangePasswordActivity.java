@@ -27,8 +27,8 @@ public class ChangePasswordActivity extends AppCompatActivity {
         back_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (ChangePasswordActivity.this, LoginActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent (ChangePasswordActivity.this, LoginActivity.class);
+  //              startActivity(intent);
             }
         });
 
@@ -45,29 +45,29 @@ public class ChangePasswordActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String passwordStr = password.getText().toString();
                 String confirmPasswordStr = confirmPassword.getText().toString();
-                if (passwordStr.equals("")){
-                    HelpDialog.openDialogNoTitle(ChangePasswordActivity.this, ChangePasswordActivity.this,
-                            (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
-                            "Please enter your\nnew password");
-                } else if (confirmPasswordStr.equals("")) {
-                    HelpDialog.openDialogNoTitle(ChangePasswordActivity.this, ChangePasswordActivity.this,
-                            (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
-                            "Please confirm your\nnew password");
-                } else {
-                    if (!passwordStr.equals(confirmPasswordStr)){
-                        HelpDialog.openDialogNoTitle(ChangePasswordActivity.this, ChangePasswordActivity.this,
-                                (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
-                                "Passwords do not match");
-                    } else {
-                        db.changePassword(email, passwordStr);
-                        HelpDialog.openDialogNoTitle(ChangePasswordActivity.this, ChangePasswordActivity.this,
-                                (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
-                                "Password successfully changed!");
-                        Intent intent = new Intent (ChangePasswordActivity.this, LoginActivity.class);
-                        startActivity(intent);
-                    }
+//                if (passwordStr.equals("")){
+//                   // HelpDialog.openDialogNoTitle(ChangePasswordActivity.this, ChangePasswordActivity.this,
+//                            (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
+//                            "Please enter your\nnew password");
+//                } else if (confirmPasswordStr.equals("")) {
+//                   // HelpDialog.openDialogNoTitle(ChangePasswordActivity.this, ChangePasswordActivity.this,
+//                            (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
+//                            "Please confirm your\nnew password");
+//                } else {
+//                    if (!passwordStr.equals(confirmPasswordStr)){
+//                     //   HelpDialog.openDialogNoTitle(ChangePasswordActivity.this, ChangePasswordActivity.this,
+//                                (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
+//                                "Passwords do not match");
+//                    } else {
+//                        db.changePassword(email, passwordStr);
+//                       // HelpDialog.openDialogNoTitle(ChangePasswordActivity.this, ChangePasswordActivity.this,
+//                                (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
+//                                "Password successfully changed!");
+//                       // Intent intent = new Intent (ChangePasswordActivity.this, LoginActivity.class);
+//                       // startActivity(intent);
+//                    }
                 }
-            }
-        });
+            });
+        }
     }
-}
+

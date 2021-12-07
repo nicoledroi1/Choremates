@@ -7,7 +7,7 @@
 //import android.view.View;
 //import android.widget.TextView;
 //
-//public class GeneralChoresPage extends AppCompatActivity {
+//public class GeneralChoresActivity extends AppCompatActivity {
 //
 //    private TextView sweep;
 //    private TextView dust;
@@ -30,7 +30,7 @@
 //        takeOutGarbage = findViewById(R.id.take_out_garbage);
 //        washCar = findViewById(R.id.wash_car);
 //
-//        intent = new Intent(GeneralChoresPage.this, FrequencyActivity.class);
+//        intent = new Intent(GeneralChoresActivity.this, FrequencyActivity.class);
 //
 //        sweep.setOnClickListener(new View.OnClickListener() {
 //            @Override

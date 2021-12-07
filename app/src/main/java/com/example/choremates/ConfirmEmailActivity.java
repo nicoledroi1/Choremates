@@ -28,19 +28,19 @@ public class ConfirmEmailActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String emailStr = email.getText().toString();
                 boolean emailExists = db.checkEmail(emailStr);
-                if (emailStr.equals("")) {
-                    HelpDialog.openDialogNoTitle(ConfirmEmailActivity.this, ConfirmEmailActivity.this,
-                            (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
-                            "Please enter an email");
-                } else if (emailExists) {
-                    HelpDialog.openDialogNoTitle(ConfirmEmailActivity.this, ConfirmEmailActivity.this,
-                            (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
-                            "No account found\nwith that email.");
-                } else {
-                    Intent intent = new Intent (ConfirmEmailActivity.this, ChangePasswordActivity.class);
-                    intent.putExtra("EMAIL", emailStr);
-                    startActivity(intent);
-                }
+//                if (emailStr.equals("")) {
+//                    HelpDialog.openDialogNoTitle(ConfirmEmailActivity.this, ConfirmEmailActivity.this,
+//                            (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
+//                            "Please enter an email");
+//                } else if (emailExists) {
+//                    HelpDialog.openDialogNoTitle(ConfirmEmailActivity.this, ConfirmEmailActivity.this,
+//                            (ConstraintLayout) findViewById(R.id.layoutDialogContainer),
+//                            "No account found\nwith that email.");
+//                } else {
+//                    Intent intent = new Intent (ConfirmEmailActivity.this, ChangePasswordActivity.class);
+//                    intent.putExtra("EMAIL", emailStr);
+//                    startActivity(intent);
+//                }
             }
         });
     }

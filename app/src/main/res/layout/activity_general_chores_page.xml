@@ -7,7 +7,7 @@
     tools:context=".GeneralChoresPage">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="1280dp">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/BathroomChores"
@@ -43,7 +43,7 @@
             app:layout_constraintVertical_bias="0.244" />
 
         <TextView
-            android:id="@+id/sweep_floors_bath"
+            android:id="@+id/sweep"
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:layout_marginStart="55dp"
@@ -66,11 +66,9 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/clean_toilet"
+            android:id="@+id/dust"
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:layout_marginStart="27dp"
-            android:layout_marginLeft="27dp"
             android:layout_marginTop="250dp"
             android:layout_marginEnd="55dp"
             android:layout_marginRight="55dp"
@@ -83,13 +81,13 @@
             android:textSize="19sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/sweep_floors_bath"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/buy_toilet_paper"
+            android:id="@+id/mop"
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:layout_marginStart="55dp"
@@ -112,7 +110,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/clean_drawers"
+            android:id="@+id/water_plants"
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:layout_marginStart="27dp"
@@ -134,7 +132,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/clean_mirror"
+            android:id="@+id/take_out_garbage"
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:layout_marginStart="55dp"
@@ -155,7 +153,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/clean_sink"
+            android:id="@+id/wash_car"
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:layout_marginStart="27dp"

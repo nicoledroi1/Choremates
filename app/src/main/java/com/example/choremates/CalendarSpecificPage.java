@@ -31,7 +31,7 @@ public class CalendarSpecificPage extends AppCompatActivity {
         setContentView(R.layout.activity_calendar_specific_page);
 
         DisplayDate();
-        DisplayChores();
+        //DisplayChores();
     }
 
     public void DisplayDate(){
@@ -44,7 +44,6 @@ public class CalendarSpecificPage extends AppCompatActivity {
 
     public void DisplayChores(){
         chores = findViewById(R.id.no_chores);
-        AddRoomatesPage.roommates = users;
 
         //For Nivetha:
         //First for loop will be for the users
