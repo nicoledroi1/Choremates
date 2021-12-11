@@ -39,8 +39,8 @@ public class LoginActivity extends AppCompatActivity {
         forgot_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (LoginActivity.this, ForgotPasswordActivity.class);
-                startActivity(intent);
+                //Intent intent = new Intent (LoginActivity.this, ForgotPasswordActivity.class);
+                //startActivity(intent);
             }
         });
 
@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                HelpDialog.openDialog("Help", "Log in using the email and password that you signed up with. If you forgot your password, then click forgot password.", LoginActivity.this, LoginActivity.this);
+                //HelpDialog.openDialog("Help", "Log in using the email and password that you signed up with. If you forgot your password, then click forgot password.", LoginActivity.this, LoginActivity.this);
             }
         });
 
@@ -65,8 +65,8 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (LoginActivity.this, ChoresActivity.class);
-                startActivity(intent);
+                //Intent intent = new Intent (LoginActivity.this, ChoresActivity.class);
+                //startActivity(intent);
             }
         });
     }

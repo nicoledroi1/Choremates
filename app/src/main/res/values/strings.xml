@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Choremates</string>
+    <string name="profiles">Profiles</string>
+    <string name="roomate_1">Roomate #1</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="create_a_profile">Create A Profile</string>
 </resources>
